@@ -1,1 +1,0 @@
-﻿ConsoleApp.Problems.TicTacToe.Main.main();

@@ -1,4 +1,48 @@
-.vs/
-.vscode/
+# ==========================================
+# Java & Maven Ignores
+# ==========================================
+# Compiled output
+**/target/
+**.class
 
-ConsoleApp/bin/
+# IntelliJ IDEA project files
+**/.idea/
+**/*.iml
+**/*.iws
+**/*.ipr
+
+# Maven wrapper folder (optional, but keeps repo clean)
+**/.mvn/
+
+# Crash logs
+hs_err_pid*
+replay_pid*
+
+# ==========================================
+# C# & .NET / Visual Studio Ignores
+# ==========================================
+# Build outputs
+**/bin/
+**/obj/
+
+# Visual Studio / VS Code configuration folders
+**/.vs/
+**/.vscode/
+
+# User-specific files & caches
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# .NET Core / Roslyn tool artifacts
+*.pot
+*.log
+.stats.json
+
+# ==========================================
+# OS / System Garbage
+# ==========================================
+Thumbs.db
+Desktop.ini
+.DS_Store
