@@ -3,10 +3,11 @@ package in.neelporiya;
 import in.neelporiya.phases.phase01basics.*;
 import in.neelporiya.phases.phase02objects.*;
 import in.neelporiya.phases.phase03encapsulation.*;
+import in.neelporiya.phases.phase04inheritance.*;
 import in.neelporiya.runner.*;
 
 public class Main {
-    public static void main(String[] args) {
+    static void main() {
         ConceptRegistry conceptRegistry = new ConceptRegistry();
         conceptRegistry.register(Phase.PHASE_01_BASICS, new PrimitiveTypesDemo());
         conceptRegistry.register(Phase.PHASE_01_BASICS, new WrapperBoxingDemo());
@@ -22,9 +23,12 @@ public class Main {
         conceptRegistry.register(Phase.PHASE_03_ENCAPSULATION, new NestedClassDemo());
         conceptRegistry.register(Phase.PHASE_03_ENCAPSULATION, new SealedClassesDemo());
 
+        conceptRegistry.register(Phase.PHASE_04_INHERITANCE, new InheritanceDemo());
+        conceptRegistry.register(Phase.PHASE_04_INHERITANCE, new FinalAndOverloadingDemo());
+
         MenuRunner menuRunner = new MenuRunner();
         // menuRunner.start(conceptRegistry);
 
-        menuRunner.start(new SealedClassesDemo());
+        menuRunner.start(new FinalAndOverloadingDemo());
     }
 }

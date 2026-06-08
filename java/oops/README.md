@@ -150,19 +150,19 @@ temp/
 
 **Goal:** Use inheritance correctly and sparingly.
 
-- [ ] `extends` keyword — **single inheritance only**
-- [ ] `super(...)` for parent constructor / `super.method()` for parent method
-- [ ] Method **overriding** vs **overloading** — and the `@Override` annotation
-- [ ] `final` classes and methods (sealing inheritance)
-- [ ] Constructor execution order (parent → child)
-- [ ] Field hiding (avoid it — fields are not polymorphic)
-- [ ] `Object` methods you commonly override
+- [x] `extends` keyword — **single inheritance only**
+- [x] `super(...)` for parent constructor / `super.method()` for parent method
+- [x] Method **overriding** vs **overloading** — and the `@Override` annotation
+- [x] `final` classes and methods (sealing inheritance)
+- [x] Constructor execution order (parent → child)
+- [x] Field hiding (avoid it — fields are not polymorphic)
+- [x] `Object` methods you commonly override
 
 **Comparison:** Java has no multiple inheritance of classes (unlike C++), but allows multiple **interface** implementation (like C#).
 
 **Exercise:** Model a small `Shape` hierarchy (`Circle`, `Rectangle`, `Triangle`) with `area()` overridden in each.
 
-- [ ] **Phase 4 Done**
+- [x] **Phase 4 Done**
 
 ---
 
@@ -466,6 +466,7 @@ Add a one-line entry per session. Date · phase · what you learned / got stuck 
 | 2026-06-08 | 1 | Primitives, wrappers/boxing (Integer cache), Strings (pool/`==`), switch expressions + `var`, arrays (covariance/`ArrayStoreException`). Built menu-driven Concept/Registry runner. |
 | 2026-06-08 | 2 | Classes, constructors + `this()` chaining, `static`/`final`, `Object` contract (`toString`/`equals`/`hashCode`), records, pass-by-value-of-references. |
 | 2026-06-08 | 3 | Access modifiers (package-private default), defensive copies (copy in/out), Builder pattern, four nested-class kinds, sealed interface + exhaustive `switch` (ADTs). |
+| 2026-06-08 | 4 | `extends`/`super`, virtual-by-default dispatch, field hiding (compile-time vs runtime resolution), ctor order, `final` classes/methods, overload resolution (widening > boxing > varargs). |
 
 ---
 
@@ -475,7 +476,7 @@ Add a one-line entry per session. Date · phase · what you learned / got stuck 
 - [x] Phase 1  &nbsp;&nbsp;·&nbsp;&nbsp; Language Basics
 - [x] Phase 2  &nbsp;&nbsp;·&nbsp;&nbsp; Classes & Objects
 - [x] Phase 3  &nbsp;&nbsp;·&nbsp;&nbsp; Encapsulation
-- [ ] Phase 4  &nbsp;&nbsp;·&nbsp;&nbsp; Inheritance
+- [x] Phase 4  &nbsp;&nbsp;·&nbsp;&nbsp; Inheritance
 - [ ] Phase 5  &nbsp;&nbsp;·&nbsp;&nbsp; Polymorphism
 - [ ] Phase 6  &nbsp;&nbsp;·&nbsp;&nbsp; Abstraction
 - [ ] Phase 7  &nbsp;&nbsp;·&nbsp;&nbsp; Composition
