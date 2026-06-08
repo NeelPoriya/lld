@@ -79,14 +79,14 @@ temp/
 
 **Goal:** Read and write idiomatic Java syntax confidently.
 
-- [ ] Primitive types: `byte`, `short`, `int`, `long`, `float`, `double`, `char`, `boolean`
-- [ ] Wrapper classes & **autoboxing** (`Integer`, `Double`, …)
-- [ ] `String` immutability, `StringBuilder`, `String.format`, text blocks (`"""`)
-- [ ] Operators, control flow (`if`, `switch` expressions, loops)
-- [ ] Arrays (`int[] a = new int[5];`) vs. collections
-- [ ] `var` (local-variable type inference)
-- [ ] Packages and `import` statements
-- [ ] `public static void main(String[] args)` — entry point conventions
+- [x] Primitive types: `byte`, `short`, `int`, `long`, `float`, `double`, `char`, `boolean`
+- [x] Wrapper classes & **autoboxing** (`Integer`, `Double`, …)
+- [x] `String` immutability, `StringBuilder`, `String.format`, text blocks (`"""`)
+- [x] Operators, control flow (`if`, `switch` expressions, loops)
+- [x] Arrays (`int[] a = new int[5];`) vs. collections
+- [x] `var` (local-variable type inference)
+- [x] Packages and `import` statements
+- [x] `public static void main(String[] args)` — entry point conventions
 
 **Comparison cheat sheet:**
 
@@ -101,7 +101,7 @@ temp/
 
 **Exercise:** Write a small CLI that reads numbers from `args`, sums them, and prints both the integer sum and a formatted message using a text block.
 
-- [ ] **Phase 1 Done**
+- [x] **Phase 1 Done**
 
 ---
 
@@ -109,21 +109,21 @@ temp/
 
 **Goal:** Understand Java's object model.
 
-- [ ] Class declaration, fields, methods, constructors
-- [ ] **Default constructor** rules
-- [ ] `this` reference and constructor chaining (`this(...)`)
-- [ ] `static` fields and methods (class-level state)
-- [ ] `final` on variables, methods, classes
-- [ ] **Everything (except primitives) is a reference** — pass-by-value of references
-- [ ] `Object` class — every class extends it implicitly
-- [ ] Override `toString()`, `equals()`, `hashCode()` — and **why they must agree**
-- [ ] **Records** (Java 16+) — concise immutable data classes
+- [x] Class declaration, fields, methods, constructors
+- [x] **Default constructor** rules
+- [x] `this` reference and constructor chaining (`this(...)`)
+- [x] `static` fields and methods (class-level state)
+- [x] `final` on variables, methods, classes
+- [x] **Everything (except primitives) is a reference** — pass-by-value of references
+- [x] `Object` class — every class extends it implicitly
+- [x] Override `toString()`, `equals()`, `hashCode()` — and **why they must agree**
+- [x] **Records** (Java 16+) — concise immutable data classes
 
 **Key gotcha:** Java has no value types (yet) — no `struct`. Even `Integer` is heap-allocated. Use primitives for performance, wrappers for collections.
 
 **Exercise:** Build a `Point` class and a `Point` record. Implement `equals`/`hashCode` manually for the class; observe the record gives them for free.
 
-- [ ] **Phase 2 Done**
+- [x] **Phase 2 Done**
 
 ---
 
@@ -131,18 +131,18 @@ temp/
 
 **Goal:** Master access control and data hiding.
 
-- [ ] Access modifiers: `public`, `protected`, **package-private (default)**, `private`
-- [ ] Getter/setter conventions (no language properties like C#)
-- [ ] Immutability patterns (`final` fields, defensive copies)
-- [ ] Builder pattern for objects with many fields
-- [ ] **Nested classes**: static nested, inner, local, anonymous
-- [ ] Sealed classes (Java 17+) — restrict who may extend
+- [x] Access modifiers: `public`, `protected`, **package-private (default)**, `private`
+- [x] Getter/setter conventions (no language properties like C#)
+- [x] Immutability patterns (`final` fields, defensive copies)
+- [x] Builder pattern for objects with many fields
+- [x] **Nested classes**: static nested, inner, local, anonymous
+- [x] Sealed classes (Java 17+) — restrict who may extend
 
 **Gotcha:** Java's default access is **package-private**, not `internal` like C# and not `private` like C++.
 
 **Exercise:** Implement an immutable `Money(amount, currency)` class with a `Builder`; ensure no mutation is possible.
 
-- [ ] **Phase 3 Done**
+- [x] **Phase 3 Done**
 
 ---
 
@@ -463,17 +463,18 @@ Add a one-line entry per session. Date · phase · what you learned / got stuck 
 | Date | Phase | Notes |
 |---|---|---|
 | YYYY-MM-DD | 0 | Installed JDK 21, set JAVA_HOME |
-|  |  |  |
-|  |  |  |
+| 2026-06-08 | 1 | Primitives, wrappers/boxing (Integer cache), Strings (pool/`==`), switch expressions + `var`, arrays (covariance/`ArrayStoreException`). Built menu-driven Concept/Registry runner. |
+| 2026-06-08 | 2 | Classes, constructors + `this()` chaining, `static`/`final`, `Object` contract (`toString`/`equals`/`hashCode`), records, pass-by-value-of-references. |
+| 2026-06-08 | 3 | Access modifiers (package-private default), defensive copies (copy in/out), Builder pattern, four nested-class kinds, sealed interface + exhaustive `switch` (ADTs). |
 
 ---
 
 ### Overall Completion
 
 - [x] Phase 0  &nbsp;&nbsp;·&nbsp;&nbsp; Setup
-- [ ] Phase 1  &nbsp;&nbsp;·&nbsp;&nbsp; Language Basics
-- [ ] Phase 2  &nbsp;&nbsp;·&nbsp;&nbsp; Classes & Objects
-- [ ] Phase 3  &nbsp;&nbsp;·&nbsp;&nbsp; Encapsulation
+- [x] Phase 1  &nbsp;&nbsp;·&nbsp;&nbsp; Language Basics
+- [x] Phase 2  &nbsp;&nbsp;·&nbsp;&nbsp; Classes & Objects
+- [x] Phase 3  &nbsp;&nbsp;·&nbsp;&nbsp; Encapsulation
 - [ ] Phase 4  &nbsp;&nbsp;·&nbsp;&nbsp; Inheritance
 - [ ] Phase 5  &nbsp;&nbsp;·&nbsp;&nbsp; Polymorphism
 - [ ] Phase 6  &nbsp;&nbsp;·&nbsp;&nbsp; Abstraction
