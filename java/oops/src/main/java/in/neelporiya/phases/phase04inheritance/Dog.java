@@ -16,4 +16,9 @@ public class Dog extends Animal{
     public String fetch() {
         return super.speak() + ", then fetches";
     }
+
+    @Override
+    public Dog reproduce() {
+        return new Dog("dog baby");
+    }
 }

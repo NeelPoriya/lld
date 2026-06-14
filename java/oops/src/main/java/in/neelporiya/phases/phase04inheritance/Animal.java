@@ -12,4 +12,9 @@ public class Animal {
     public String speak() {
         return name + " made a sound...";
     }
+
+    // Used for covariant returns in Phase 05 - Polymorphism
+    public Animal reproduce() {
+        return new Animal("baby");
+    }
 }

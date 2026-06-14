@@ -170,18 +170,18 @@ temp/
 
 **Goal:** Use runtime and compile-time polymorphism idiomatically.
 
-- [ ] **Dynamic dispatch** — methods are virtual by default in Java (opposite of C#/C++)
-- [ ] Upcasting / downcasting and `instanceof`
-- [ ] **Pattern matching for `instanceof`** (Java 16+)
-- [ ] **Switch pattern matching** (Java 21)
-- [ ] Method overloading resolution rules
-- [ ] Covariant return types
+- [x] **Dynamic dispatch** — methods are virtual by default in Java (opposite of C#/C++)
+- [x] Upcasting / downcasting and `instanceof`
+- [x] **Pattern matching for `instanceof`** (Java 16+)
+- [x] **Switch pattern matching** (Java 21)
+- [x] Method overloading resolution rules
+- [x] Covariant return types
 
 **Critical mindset shift:** In C++/C# you opt **in** to virtual. In Java you opt **out** with `final`. Plan your class designs accordingly.
 
 **Exercise:** Extend the `Shape` hierarchy with a `describe(Object o)` method that uses pattern matching with `instanceof` and `switch`.
 
-- [ ] **Phase 5 Done**
+- [x] **Phase 5 Done**
 
 ---
 
@@ -189,15 +189,15 @@ temp/
 
 **Goal:** Choose the right abstraction tool.
 
-- [ ] `abstract` classes and methods
-- [ ] `interface` — methods are implicitly `public abstract`
-- [ ] **Default methods** in interfaces (Java 8+)
-- [ ] **Static methods** in interfaces
-- [ ] **Private methods** in interfaces (Java 9+)
-- [ ] Multiple interface inheritance & the **diamond problem** resolution
-- [ ] `Comparable<T>` vs `Comparator<T>`
-- [ ] **Sealed interfaces** (Java 17+) for closed type hierarchies
-- [ ] Functional interfaces (`@FunctionalInterface`) — bridge to Phase 11
+- [x] `abstract` classes and methods
+- [x] `interface` — methods are implicitly `public abstract`
+- [x] **Default methods** in interfaces (Java 8+)
+- [x] **Static methods** in interfaces
+- [x] **Private methods** in interfaces (Java 9+)
+- [x] Multiple interface inheritance & the **diamond problem** resolution
+- [x] `Comparable<T>` vs `Comparator<T>`
+- [x] **Sealed interfaces** (Java 17+) for closed type hierarchies
+- [x] Functional interfaces (`@FunctionalInterface`) — bridge to Phase 11
 
 **Decision guide:**
 | Need | Use |
@@ -208,7 +208,7 @@ temp/
 
 **Exercise:** Define `Drawable` and `Resizable` interfaces; make `Shape` implement both. Add a `Comparator<Shape>` that sorts by area.
 
-- [ ] **Phase 6 Done**
+- [x] **Phase 6 Done**
 
 ---
 
@@ -216,15 +216,15 @@ temp/
 
 **Goal:** Prefer composition over inheritance.
 
-- [ ] Composition: strong "has-a" (lifetime owned)
-- [ ] Aggregation: weak "has-a" (shared lifetime)
-- [ ] Association: "uses-a"
-- [ ] Delegation pattern
-- [ ] Dependency injection by constructor
+- [x] Composition: strong "has-a" (lifetime owned)
+- [x] Aggregation: weak "has-a" (shared lifetime)
+- [x] Association: "uses-a"
+- [x] Delegation pattern
+- [x] Dependency injection by constructor
 
 **Exercise:** Refactor a small inheritance-heavy design (e.g., `Employee → Manager → Director`) into composition with role objects.
 
-- [ ] **Phase 7 Done**
+- [x] **Phase 7 Done**
 
 ---
 
@@ -232,19 +232,19 @@ temp/
 
 **Goal:** Write type-safe generic code and understand its limits.
 
-- [ ] Generic classes, methods, and constructors
-- [ ] **Type erasure** — what survives at runtime and what doesn't
-- [ ] Bounded type parameters (`<T extends Number>`)
-- [ ] Wildcards: `?`, `? extends T`, `? super T`
-- [ ] **PECS rule** — Producer Extends, Consumer Super
-- [ ] Generic restrictions: no `new T()`, no `T[]`, no primitives
-- [ ] Raw types (and why to avoid them)
+- [x] Generic classes, methods, and constructors
+- [x] **Type erasure** — what survives at runtime and what doesn't
+- [x] Bounded type parameters (`<T extends Number>`)
+- [x] Wildcards: `?`, `? extends T`, `? super T`
+- [x] **PECS rule** — Producer Extends, Consumer Super
+- [x] Generic restrictions: no `new T()`, no `T[]`, no primitives
+- [x] Raw types (and why to avoid them)
 
 **Big difference vs C#:** Java generics are **erased** at runtime — you can't do `if (x instanceof List<String>)`. C# has reified generics.
 
 **Exercise:** Implement a generic `Pair<A, B>` and a generic `Stack<T>` backed by an array (deal with the array-creation quirk).
 
-- [ ] **Phase 8 Done**
+- [x] **Phase 8 Done**
 
 ---
 
@@ -252,19 +252,19 @@ temp/
 
 **Goal:** Know what to reach for and why.
 
-- [ ] `Collection` hierarchy: `List`, `Set`, `Queue`, `Deque`, `Map`
-- [ ] Implementations: `ArrayList`, `LinkedList`, `HashSet`, `TreeSet`, `LinkedHashSet`, `HashMap`, `TreeMap`, `LinkedHashMap`, `ArrayDeque`, `PriorityQueue`
-- [ ] `Iterator`, `ListIterator`, and `for-each`
-- [ ] Concurrent collections: `ConcurrentHashMap`, `CopyOnWriteArrayList`
-- [ ] Immutable factories: `List.of(...)`, `Map.of(...)`, `Set.of(...)`
-- [ ] `Collections` utility class (`sort`, `reverse`, `unmodifiableList`)
-- [ ] Big-O of common operations
+- [x] `Collection` hierarchy: `List`, `Set`, `Queue`, `Deque`, `Map`
+- [x] Implementations: `ArrayList`, `LinkedList`, `HashSet`, `TreeSet`, `LinkedHashSet`, `HashMap`, `TreeMap`, `LinkedHashMap`, `ArrayDeque`, `PriorityQueue`
+- [x] `Iterator`, `ListIterator`, and `for-each`
+- [x] Concurrent collections: `ConcurrentHashMap`, `CopyOnWriteArrayList`
+- [x] Immutable factories: `List.of(...)`, `Map.of(...)`, `Set.of(...)`
+- [x] `Collections` utility class (`sort`, `reverse`, `unmodifiableList`)
+- [x] Big-O of common operations
 
 **Comparison:** `ArrayList<T>` ≈ `List<T>` (C#) ≈ `std::vector<T>` (C++). `HashMap<K,V>` ≈ `Dictionary<K,V>` ≈ `std::unordered_map`.
 
 **Exercise:** Write a word-frequency counter that reads a file and prints the top 10 words using `HashMap` + sorting.
 
-- [ ] **Phase 9 Done**
+- [x] **Phase 9 Done**
 
 ---
 
@@ -272,19 +272,19 @@ temp/
 
 **Goal:** Handle errors idiomatically.
 
-- [ ] Exception hierarchy: `Throwable` → `Error` / `Exception` → `RuntimeException`
-- [ ] **Checked vs unchecked** exceptions — Java's unique stance
-- [ ] `try` / `catch` / `finally` / **try-with-resources** (`AutoCloseable`)
-- [ ] Multi-catch (`catch (IOException | SQLException e)`)
-- [ ] `throws` clause in method signatures
-- [ ] Custom exception classes
-- [ ] When to wrap vs. rethrow
+- [x] Exception hierarchy: `Throwable` → `Error` / `Exception` → `RuntimeException`
+- [x] **Checked vs unchecked** exceptions — Java's unique stance
+- [x] `try` / `catch` / `finally` / **try-with-resources** (`AutoCloseable`)
+- [x] Multi-catch (`catch (IOException | SQLException e)`)
+- [x] `throws` clause in method signatures
+- [x] Custom exception classes
+- [x] When to wrap vs. rethrow
 
 **Critical difference:** Checked exceptions force callers to handle or declare them — there is no C# / C++ equivalent. Many modern Java libs avoid them; be deliberate.
 
 **Exercise:** Write a file reader that uses try-with-resources and defines a custom `ConfigParseException`.
 
-- [ ] **Phase 10 Done**
+- [x] **Phase 10 Done**
 
 ---
 
@@ -292,20 +292,20 @@ temp/
 
 **Goal:** Write expressive, declarative code.
 
-- [ ] Lambda syntax: `(x, y) -> x + y`
-- [ ] Method references: `String::length`, `System.out::println`
-- [ ] Built-in functional interfaces: `Function`, `Predicate`, `Consumer`, `Supplier`, `BiFunction`
-- [ ] `Optional<T>` — proper use (no `.get()` without a check)
-- [ ] Stream API: `filter`, `map`, `flatMap`, `reduce`, `collect`
-- [ ] `Collectors`: `toList`, `toMap`, `groupingBy`, `partitioningBy`
-- [ ] Parallel streams — when (rarely) to use them
-- [ ] Stream gotchas: laziness, single consumption
+- [x] Lambda syntax: `(x, y) -> x + y`
+- [x] Method references: `String::length`, `System.out::println`
+- [x] Built-in functional interfaces: `Function`, `Predicate`, `Consumer`, `Supplier`, `BiFunction`
+- [x] `Optional<T>` — proper use (no `.get()` without a check)
+- [x] Stream API: `filter`, `map`, `flatMap`, `reduce`, `collect`
+- [x] `Collectors`: `toList`, `toMap`, `groupingBy`, `partitioningBy`
+- [x] Parallel streams — when (rarely) to use them
+- [x] Stream gotchas: laziness, single consumption
 
 **C# analogy:** LINQ → Stream. `IEnumerable<T>` → `Stream<T>`. `Func<T, TResult>` → `Function<T, R>`. `Nullable<T>` → `Optional<T>` (but only for references).
 
 **Exercise:** Re-implement the word-frequency counter from Phase 9 using Streams in one expression.
 
-- [ ] **Phase 11 Done**
+- [x] **Phase 11 Done**
 
 ---
 
@@ -313,19 +313,19 @@ temp/
 
 **Goal:** Understand the JVM concurrency model.
 
-- [ ] `Thread`, `Runnable`, `Callable<V>`
-- [ ] `synchronized`, `volatile`, the Java Memory Model (high level)
-- [ ] `ExecutorService` and thread pools
-- [ ] `Future<V>` and `CompletableFuture<V>`
-- [ ] `java.util.concurrent` primitives: `Lock`, `ReentrantLock`, `Semaphore`, `CountDownLatch`
-- [ ] **Virtual threads** (Java 21) — Project Loom
-- [ ] Common bugs: race conditions, deadlocks, visibility
+- [x] `Thread`, `Runnable`, `Callable<V>`
+- [x] `synchronized`, `volatile`, the Java Memory Model (high level)
+- [x] `ExecutorService` and thread pools
+- [x] `Future<V>` and `CompletableFuture<V>`
+- [x] `java.util.concurrent` primitives: `Lock`, `ReentrantLock`, `Semaphore`, `CountDownLatch`
+- [x] **Virtual threads** (Java 21) — Project Loom
+- [x] Common bugs: race conditions, deadlocks, visibility
 
 **Comparison:** `CompletableFuture` ≈ `Task<T>` (C#). Virtual threads ≈ a different model — closer to goroutines than to `async/await`.
 
 **Exercise:** Build a parallel URL fetcher using `CompletableFuture` and an `ExecutorService`.
 
-- [ ] **Phase 12 Done**
+- [x] **Phase 12 Done**
 
 ---
 
@@ -333,15 +333,15 @@ temp/
 
 **Goal:** Use modern I/O APIs.
 
-- [ ] Legacy `java.io` vs modern `java.nio.file`
-- [ ] `Path`, `Files`, `Files.readAllLines`, `Files.lines` (stream)
-- [ ] Reading/writing JSON (use **Jackson** or **Gson**)
-- [ ] HTTP client (`java.net.http.HttpClient`, Java 11+)
-- [ ] Date/time API (`java.time.*`) — never use `java.util.Date`
+- [x] Legacy `java.io` vs modern `java.nio.file`
+- [x] `Path`, `Files`, `Files.readAllLines`, `Files.lines` (stream)
+- [x] Reading/writing JSON (use **Jackson** or **Gson**)
+- [x] HTTP client (`java.net.http.HttpClient`, Java 11+)
+- [x] Date/time API (`java.time.*`) — never use `java.util.Date`
 
 **Exercise:** Fetch JSON from a public API (e.g., GitHub) and deserialize it into a record.
 
-- [ ] **Phase 13 Done**
+- [x] **Phase 13 Done**
 
 ---
 
@@ -349,16 +349,16 @@ temp/
 
 **Goal:** Write tests as you go.
 
-- [ ] **JUnit 5** basics: `@Test`, `@BeforeEach`, `@AfterEach`, `@DisplayName`
-- [ ] Assertions: `assertEquals`, `assertThrows`, `assertAll`
-- [ ] Parameterized tests (`@ParameterizedTest`, `@ValueSource`, `@MethodSource`)
+- [x] **JUnit 5** basics: `@Test`, `@BeforeEach`, `@AfterEach`, `@DisplayName`
+- [x] Assertions: `assertEquals`, `assertThrows`, `assertAll`
+- [x] Parameterized tests (`@ParameterizedTest`, `@ValueSource`, `@MethodSource`)
 - [ ] **Mockito** basics: `mock()`, `when().thenReturn()`, `verify()`
 - [ ] **AssertJ** for fluent assertions (optional but idiomatic)
-- [ ] Test-driven loop: red → green → refactor
+- [x] Test-driven loop: red → green → refactor
 
 **Exercise:** Add JUnit tests for the `Shape` hierarchy and the word-frequency counter.
 
-- [ ] **Phase 14 Done**
+- [x] **Phase 14 Done**
 
 ---
 
@@ -366,17 +366,17 @@ temp/
 
 **Goal:** Ship a real Java project.
 
-- [ ] Maven `pom.xml` structure: `groupId`, `artifactId`, dependencies, plugins
-- [ ] Gradle `build.gradle(.kts)` equivalents
-- [ ] Dependency scopes (`compile`, `test`, `provided`)
-- [ ] Building a JAR (`mvn package`) and running it (`java -jar`)
+- [x] Maven `pom.xml` structure: `groupId`, `artifactId`, dependencies, plugins
+- [x] Gradle `build.gradle(.kts)` equivalents
+- [x] Dependency scopes (`compile`, `test`, `provided`)
+- [x] Building a JAR (`mvn package`) and running it (`java -jar`)
 - [ ] **Java Modules (JPMS)** — module-info.java basics
 - [ ] Logging: **SLF4J + Logback** (the de-facto standard)
-- [ ] Skim **Spring Boot** to understand the dominant framework
+- [x] Skim **Spring Boot** to understand the dominant framework
 
 **Exercise:** Convert one of your practice projects to Maven with at least one external dependency (Jackson or Gson).
 
-- [ ] **Phase 15 Done**
+- [x] **Phase 15 Done**
 
 ---
 
@@ -467,6 +467,17 @@ Add a one-line entry per session. Date · phase · what you learned / got stuck 
 | 2026-06-08 | 2 | Classes, constructors + `this()` chaining, `static`/`final`, `Object` contract (`toString`/`equals`/`hashCode`), records, pass-by-value-of-references. |
 | 2026-06-08 | 3 | Access modifiers (package-private default), defensive copies (copy in/out), Builder pattern, four nested-class kinds, sealed interface + exhaustive `switch` (ADTs). |
 | 2026-06-08 | 4 | `extends`/`super`, virtual-by-default dispatch, field hiding (compile-time vs runtime resolution), ctor order, `final` classes/methods, overload resolution (widening > boxing > varargs). |
+| 2026-06-09 | 5 | Up/downcasting + `ClassCastException`, pattern-matching `instanceof` (flow scoping), `switch` type patterns + `when` guards + `case null` + record deconstruction, covariant returns. |
+| 2026-06-09 | 6 | Abstract class vs interface, default/static/private interface methods, diamond resolution, `Comparable` vs `Comparator` (+ `TreeSet` uses `compareTo` not `equals`), functional interfaces + lambdas. |
+| 2026-06-09 | 7 | Composition vs aggregation vs association (by lifetime), delegation, refactoring inheritance → composition with swappable roles, constructor DI. |
+| 2026-06-09 | 8 | Generic classes/methods, bounded type params, **type erasure** (`getClass()` equality, `Stack<T>` via `Object[]`, restrictions), wildcards + PECS (invariance vs array covariance). |
+| 2026-06-09 | 9 | List/Set/Map implementations + ordering (Hash/Tree/Linked), Big-O, `list.remove(int)` index-vs-value trap, Queue/Deque/PriorityQueue, CME + `removeIf`. |
+| 2026-06-09 | 10 | Throwable hierarchy, checked vs unchecked (Java-unique), try/catch/finally, try-with-resources (`AutoCloseable`), multi-catch, custom exceptions, wrap-with-cause. |
+| 2026-06-09 | 11 | Stream pipeline (lazy + single-use), filter/map/reduce/collect, `Collectors` (groupingBy/partitioningBy/toMap), word-frequency, `Optional`. LINQ analogy throughout. |
+| 2026-06-09 | 12 | Thread/Runnable/Callable, race condition + `AtomicInteger`/`synchronized` fixes, `ExecutorService`, `CompletableFuture` composition (join the tail!), virtual threads ≈ goroutines. |
+| 2026-06-09 | 13 | NIO `Files`/`Path` (+ lazy `Files.lines`), `java.time` (use `Instant` for timestamps, never `LocalDateTime`/`Date`), `HttpClient` real GET, Jackson JSON → record (1st dependency). |
+| 2026-06-09 | 14 | JUnit 5 (`@Test`/`@BeforeEach`/`@DisplayName`), `assertEquals`/`assertThrows`/`assertAll`, `@ParameterizedTest`. Ran `mvn test` → 7 green. (Mockito/AssertJ skipped.) |
+| 2026-06-09 | 15 | `pom.xml` + dependency scopes (hands-on via Jackson/JUnit), maven-shade-plugin → runnable fat JAR, `java -jar` verified launching the menu. Gradle/JPMS/SLF4J/Spring read-only. |
 
 ---
 
@@ -477,17 +488,17 @@ Add a one-line entry per session. Date · phase · what you learned / got stuck 
 - [x] Phase 2  &nbsp;&nbsp;·&nbsp;&nbsp; Classes & Objects
 - [x] Phase 3  &nbsp;&nbsp;·&nbsp;&nbsp; Encapsulation
 - [x] Phase 4  &nbsp;&nbsp;·&nbsp;&nbsp; Inheritance
-- [ ] Phase 5  &nbsp;&nbsp;·&nbsp;&nbsp; Polymorphism
-- [ ] Phase 6  &nbsp;&nbsp;·&nbsp;&nbsp; Abstraction
-- [ ] Phase 7  &nbsp;&nbsp;·&nbsp;&nbsp; Composition
-- [ ] Phase 8  &nbsp;&nbsp;·&nbsp;&nbsp; Generics
-- [ ] Phase 9  &nbsp;&nbsp;·&nbsp;&nbsp; Collections
-- [ ] Phase 10 &nbsp;·&nbsp; Exceptions
-- [ ] Phase 11 &nbsp;·&nbsp; Lambdas & Streams
-- [ ] Phase 12 &nbsp;·&nbsp; Concurrency
-- [ ] Phase 13 &nbsp;·&nbsp; I/O & Modern APIs
-- [ ] Phase 14 &nbsp;·&nbsp; Testing
-- [ ] Phase 15 &nbsp;·&nbsp; Build & Ecosystem
+- [x] Phase 5  &nbsp;&nbsp;·&nbsp;&nbsp; Polymorphism
+- [x] Phase 6  &nbsp;&nbsp;·&nbsp;&nbsp; Abstraction
+- [x] Phase 7  &nbsp;&nbsp;·&nbsp;&nbsp; Composition
+- [x] Phase 8  &nbsp;&nbsp;·&nbsp;&nbsp; Generics
+- [x] Phase 9  &nbsp;&nbsp;·&nbsp;&nbsp; Collections
+- [x] Phase 10 &nbsp;·&nbsp; Exceptions
+- [x] Phase 11 &nbsp;·&nbsp; Lambdas & Streams
+- [x] Phase 12 &nbsp;·&nbsp; Concurrency
+- [x] Phase 13 &nbsp;·&nbsp; I/O & Modern APIs
+- [x] Phase 14 &nbsp;·&nbsp; Testing
+- [x] Phase 15 &nbsp;·&nbsp; Build & Ecosystem
 - [ ] Phase 16 &nbsp;·&nbsp; Capstone
 - [ ] Phase 17 &nbsp;·&nbsp; Patterns
 - [ ] Phase 18 &nbsp;·&nbsp; SOLID
