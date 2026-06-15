@@ -70,8 +70,8 @@ public class Main {
         conceptRegistry.register(Phase.PHASE_13_IO, new HttpClientDemo());
 
         MenuRunner menuRunner = new MenuRunner();
-         menuRunner.start(conceptRegistry);
+//         menuRunner.start(conceptRegistry);
 
-//        menuRunner.start(new HttpClientDemo());
+        menuRunner.start(new VirtualThreadsDemo());
     }
 }
